@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Novaterra · La Victoria Proyecto Campestre</title>
+<meta name="description" content="Lotes campestres de 8 × 20 m con escritura individual en Coello, Tolima, a 5 minutos de Espinal. Separa con $500.000 y paga en cuotas.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Novaterra">
+<meta property="og:title" content="La Victoria Proyecto Campestre · Novaterra">
+<meta property="og:description" content="Lotes campestres con escritura individual en Coello, Tolima. Separa con $500.000 y paga hasta en 18 meses.">
+<meta property="og:image" content="https://usanovaterra.github.io/img/og.jpg">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icono.png">
+<link rel="apple-touch-icon" href="img/icono.png">
+<meta name="theme-color" content="#0E2E20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Lora:ital,wght@0,700;1,700&display=swap">
+<style>
+:root {
+  --bg: #F2F4EE; --surface: #FFFFFF; --sunk: #E7EBE2; --ink: #1C2921; --muted: #56625A; --line: #D6DCD0;
+  --teja: #A9482A; --teja-soft: #F4E2D9; --monte: #2E5B42; --wa: #1F8A50; --on-accent: #FFFFFF;
+  --shadow: 0 1px 2px rgb(28 41 33 / .06), 0 12px 32px -12px rgb(28 41 33 / .18);
+  --f-display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --f-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-accent: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --s-1: clamp(2.6rem, 1.6rem + 4.6vw, 5.4rem); --s-2: clamp(1.9rem, 1.4rem + 2.2vw, 3.1rem); --s-3: clamp(1.3rem, 1.1rem + .8vw, 1.7rem);
+  --s-body: 1.0625rem; --s-small: .875rem; --wrap: 1180px; --r: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111713; --surface: #19211C; --sunk: #151C17; --ink: #ECF0E8; --muted: #A3AEA6;
+    --line: #2B352E; --teja: #E58A63; --teja-soft: #3A2219; --monte: #86C29E; --wa: #2FA866;
+    --on-accent: #111713; --shadow: 0 1px 2px rgb(0 0 0 / .4), 0 12px 32px -12px rgb(0 0 0 / .6);
+    color-scheme: dark;
+  }
+  .contact { color: var(--bg); }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: var(--s-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--teja); outline-offset: 3px; border-radius: 4px; }
+[hidden] { display: none !important; }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 800; line-height: 1.02; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+h2 { font-size: var(--s-2); }
+h3 { font-size: var(--s-3); font-weight: 700; letter-spacing: -.01em; }
+p { margin: 0; }
+em.serif { font-family: var(--f-accent); font-style: italic; font-weight: 400; letter-spacing: 0; }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--monte); }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 58ch; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px; padding: .8rem 1.4rem; border-radius: 999px; font: 600 1rem/1 var(--f-body); text-decoration: none; cursor: pointer; border: 1.5px solid transparent; transition: transform .15s ease, background-color .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-ghost { border-color: var(--line); color: var(--ink); background: var(--surface); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.ribbon { background: #C8202B; color: #FFF8EC; font-size: .9rem; font-weight: 600; }
+.ribbon b { color: #F2C14E; }
+.ribbon a { color: #FFF8EC; text-underline-offset: 3px; }
+.ribbon .wrap { display: flex; flex-wrap: wrap; gap: .3rem 1rem; justify-content: center; padding-block: .6rem; text-align: center; }
+.site-head { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .75rem; }
+.brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+.brand b { font-family: var(--f-display); font-weight: 800; font-size: 1.25rem; letter-spacing: .12em; }
+.brand span { font-size: .66rem; font-weight: 600; letter-spacing: .3em; color: var(--muted); margin-top: .3rem; }
+.nav { display: flex; gap: 1.6rem; font-size: .95rem; font-weight: 500; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+.site-head .btn { min-height: 42px; padding: .6rem 1.1rem; font-size: .92rem; }
+@media (max-width: 820px) { .nav { display: none; } }
+.hero { padding-block: clamp(2rem, 5vw, 4.5rem) 0; }
+.hero-top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 2rem 3rem; align-items: end; }
+.hero h1 { font-size: var(--s-1); }
+.hero h1 em.serif { color: var(--teja); font-size: 1.04em; }
+.hero-side { display: grid; gap: 1.4rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero-figure { position: relative; margin: clamp(1.8rem, 4vw, 3rem) 0 0; overflow: hidden; border-radius: var(--r); background: var(--sunk); }
+.hero-figure .hero-bg { position: absolute; inset: 0; background: url(img/portada-drone.jpg) center / cover; filter: blur(28px) brightness(.9) saturate(1.1); transform: scale(1.2); }
+.hero-figure img { position: relative; width: 100%; height: auto; aspect-ratio: 16 / 8; object-fit: contain; }
+.hero-figure figcaption { position: absolute; left: 1rem; bottom: 1rem; background: color-mix(in srgb, var(--surface) 92%, transparent); color: var(--ink); padding: .45rem .8rem; border-radius: 8px; font-size: .8rem; font-weight: 600; }
+@media (max-width: 820px) { .hero-top { grid-template-columns: 1fr; } .hero-figure img { aspect-ratio: 4 / 5; object-fit: cover; } }
+.facts dl { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.facts div { padding: 1.4rem 1.2rem 1.5rem 0; display: grid; gap: .25rem; }
+.facts div + div { padding-left: 1.2rem; border-left: 1px solid var(--line); }
+.facts dt { font-size: .82rem; color: var(--muted); font-weight: 500; }
+.facts dd { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+@media (max-width: 820px) { .facts dl { grid-template-columns: repeat(2, minmax(0, 1fr)); } .facts div:nth-child(3) { padding-left: 0; border-left: 0; } .facts div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(1.8rem, 4vw, 3rem); max-width: 62ch; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.split .media { position: relative; max-width: 420px; width: 100%; margin-inline: auto; }
+.split video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: var(--r); background: var(--sunk); }
+.badge-live { position: absolute; top: .8rem; left: .8rem; display: inline-flex; align-items: center; gap: .45rem; background: var(--surface); color: var(--ink); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .35rem .65rem; border-radius: 999px; box-shadow: var(--shadow); }
+.badge-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--teja); }
+.ticks { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: .8rem; }
+.ticks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: .7rem; align-items: start; }
+.ticks svg { width: 22px; height: 22px; color: var(--monte); margin-top: .15rem; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
+.testi, .zonas { background: var(--surface); border-block: 1px solid var(--line); }
+.testi-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 16px; }
+.testi video { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--r); background: #000; }
+.testi .side { display: grid; gap: 16px; }
+.testi .side figure { margin: 0; position: relative; overflow: hidden; border-radius: var(--r); background: var(--sunk); }
+.testi .side img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.testi .side figcaption { position: absolute; inset: auto 0 0 0; padding: 2rem .9rem .8rem; color: #fff; font-weight: 600; font-size: .92rem; background: linear-gradient(to top, rgb(14 22 17 / .72), transparent); }
+@media (max-width: 820px) { .testi-grid { grid-template-columns: 1fr; } .testi .side { grid-template-columns: 1fr 1fr; gap: 10px; } }
+.gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
+.tile { position: relative; margin: 0; overflow: hidden; border-radius: var(--r); background: var(--sunk); }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.tile:hover img { transform: scale(1.035); }
+.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 2.2rem 1rem .9rem; color: #fff; font-weight: 600; background: linear-gradient(to top, rgb(14 22 17 / .72), transparent); }
+.tile figcaption small { display: block; font-weight: 500; opacity: .85; font-size: .82rem; }
+.t1 { grid-column: span 7; aspect-ratio: 4 / 3; } .t2 { grid-column: span 5; }
+.t3, .t4, .t5 { grid-column: span 4; aspect-ratio: 3 / 4; }
+.t6, .t7 { grid-column: span 6; aspect-ratio: 16 / 10; }
+@media (max-width: 820px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .t1, .t2, .t5, .t6, .t7 { grid-column: span 2; aspect-ratio: 4 / 3; }
+  .t3, .t4 { grid-column: span 1; aspect-ratio: 3 / 4; }
+}
+.plan figure { margin: 0; }
+.plan img { width: 100%; border-radius: var(--r); }
+.plan figcaption { margin-top: .7rem; font-size: var(--s-small); color: var(--muted); }
+.pagos { background: var(--sunk); }
+.options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.opt { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 1.6rem; display: grid; grid-template-rows: auto auto 1fr auto; gap: .8rem; }
+.opt.feature { border-color: var(--teja); box-shadow: var(--shadow); }
+.opt .tag { justify-self: start; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .6rem; border-radius: 999px; background: var(--teja-soft); color: var(--teja); }
+.opt .tag.plain { background: var(--sunk); color: var(--muted); }
+.opt .big { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.8rem, 1.4rem + 1.4vw, 2.4rem); letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1.05; }
+.opt .big small { display: block; font-family: var(--f-body); font-weight: 500; font-size: .9rem; color: var(--muted); letter-spacing: 0; margin-top: .35rem; }
+.opt ul { margin: 0; padding-left: 1.1rem; color: var(--muted); display: grid; gap: .35rem; font-size: .97rem; }
+.opt .btn { justify-self: start; }
+.pagos .note { margin-top: 1.4rem; font-size: var(--s-small); color: var(--muted); }
+@media (max-width: 900px) { .options { grid-template-columns: 1fr; } }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.2rem, 3vw, 2.4rem); counter-reset: s; }
+.steps li { counter-increment: s; display: grid; gap: .6rem; padding-top: 1.2rem; border-top: 2px solid var(--ink); }
+.steps li::before { content: "Paso " counter(s); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teja); }
+.steps p { color: var(--muted); }
+@media (max-width: 820px) { .steps { grid-template-columns: 1fr; } }
+.faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(2rem, 5vw, 4rem); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-of-type { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; font-weight: 600; font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--f-display); font-size: 1.4rem; line-height: 1; color: var(--teja); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding-bottom: 1.2rem; color: var(--muted); max-width: 60ch; }
+@media (max-width: 820px) { .faq { grid-template-columns: 1fr; } }
+.contact { background: var(--monte); color: #fff; }
+.contact .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.contact .eyebrow { color: inherit; opacity: .8; }
+.contact .lead { color: inherit; opacity: .85; }
+.contact-data { display: grid; gap: .9rem; margin-top: 1.8rem; }
+.contact-data p { display: grid; gap: .1rem; }
+.contact-data small { opacity: .75; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.contact-data b { font-size: 1.25rem; user-select: all; }
+form.lead-form { background: var(--surface); color: var(--ink); border-radius: var(--r); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 1rem; box-shadow: var(--shadow); }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .88rem; font-weight: 600; }
+.field input, .field select { width: 100%; min-height: 48px; padding: .7rem .9rem; border: 1.5px solid var(--line); border-radius: 10px; font: inherit; color: var(--ink); background: var(--bg); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--monte); }
+.form-note { font-size: .82rem; color: var(--muted); }
+.form-msg { font-size: .9rem; font-weight: 600; color: var(--monte); }
+.form-msg a { color: var(--wa); }
+@media (max-width: 820px) { .contact .grid { grid-template-columns: 1fr; } }
+footer { padding-block: 2rem 6rem; font-size: var(--s-small); color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 30; box-shadow: 0 10px 24px -8px rgb(0 0 0 / .4); }
+@media (max-width: 520px) { .fab span { display: none; } .fab { width: 56px; height: 56px; padding: 0; } }
+@keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+.hero h1, .hero-side, .hero-figure { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero-side { animation-delay: .08s; } .hero-figure { animation-delay: .16s; }
+.xmas { background: #0B2E20; color: #FFF8EC; border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+.xmas .txt { padding: clamp(1.5rem, 4vw, 3rem); display: grid; gap: 1.4rem; align-content: center; }
+.xmas .kicker { font-size: .78rem; font-weight: 800; letter-spacing: .24em; text-transform: uppercase; color: #F2C14E; }
+.xmas h2 { font-family: "Lora", Georgia, serif; font-weight: 700; letter-spacing: 0; line-height: 1.08; color: #FFF8EC; }
+.xmas h2 em { display: block; font-style: italic; color: #F2C14E; }
+.coupons { display: grid; gap: 12px; }
+.coupon { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); border-radius: 16px; overflow: hidden; background: #FFF8EC; color: #0B2E20; box-shadow: 0 14px 30px -12px rgb(0 0 0 / .5); }
+.coupon .amt { background: #C8202B; color: #FFF8EC; display: grid; place-content: center; text-align: center; padding: .9rem .5rem; border-right: 3px dashed #FFF8EC; }
+.coupon.gold .amt { background: #F2C14E; color: #0B2E20; }
+.coupon .amt small { font-size: .7rem; font-weight: 800; letter-spacing: .2em; }
+.coupon .amt b { font-family: "Lora", Georgia, serif; font-size: 2.6rem; line-height: 1; }
+.coupon .amt i { font-family: "Lora", Georgia, serif; font-style: normal; font-weight: 700; font-size: 1rem; }
+.coupon .info { padding: .9rem 1.1rem; display: grid; align-content: center; gap: .15rem; }
+.coupon .info small { font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #A51C25; }
+.coupon.gold .info small { color: #7A5A0E; }
+.coupon .info b { font-size: 1.15rem; line-height: 1.25; }
+.coupon .info span { font-size: .9rem; color: #4A5A50; }
+.flip { display: flex; align-items: flex-start; gap: .5rem; flex-wrap: nowrap; }
+.flip div { display: grid; justify-items: center; gap: .45rem; }
+.flip b { position: relative; min-width: 4.4rem; padding: .55rem .4rem; background: #FFF8EC; color: #C8202B; border-radius: 12px; font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 2.5rem; line-height: 1; text-align: center; font-variant-numeric: tabular-nums; box-shadow: 0 6px 14px rgb(0 0 0 / .3); }
+.flip b::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: rgb(11 46 32 / .2); }
+.flip span { font-size: .7rem; font-weight: 800; letter-spacing: .18em; color: #F2C14E; }
+.flip em { font-family: "Lora", Georgia, serif; font-style: normal; font-size: 2rem; line-height: 3.4rem; color: #F2C14E; }
+.xmas .valid { font-weight: 700; }
+.xmas .valid span { color: #F2C14E; }
+.btn-gold { background: #F2C14E; color: #0B2E20; font-weight: 800; }
+.xmas .img { position: relative; min-height: 340px; background: #13402D; }
+.xmas .img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.xmas .img span { position: absolute; left: 1rem; top: 1rem; background: #C8202B; color: #FFF8EC; font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: .45rem .8rem; border-radius: 999px; }
+@media (max-width: 820px) { .xmas { grid-template-columns: 1fr; } .xmas .img { min-height: 240px; order: -1; } }
+@media (max-width: 440px) { .flip { gap: .3rem; } .flip b { min-width: 3.3rem; font-size: 1.9rem; } .flip em { display: none; } .coupon { grid-template-columns: 7.2rem minmax(0, 1fr); } .coupon .amt b { font-size: 2.1rem; } }
+.compare-box { overflow-x: auto; }
+.compare { width: 100%; min-width: 520px; border-collapse: separate; border-spacing: 0 6px; font-size: 1.02rem; }
+.compare th { text-align: left; padding: .85rem 1.1rem; color: #FFFFFF; font-size: 1.05rem; }
+.compare th:first-child { background: #0B2E20; border-radius: 12px 0 0 12px; width: 58%; }
+.compare th:last-child { background: #6E5F4B; border-radius: 0 12px 12px 0; }
+.compare td { padding: .9rem 1.1rem; vertical-align: middle; }
+.compare td:first-child { background: #DCEBDD; color: #0B2E20; font-weight: 700; border-radius: 12px 0 0 12px; }
+.compare td:last-child { background: #EFE5D3; color: #5E523F; border-radius: 0 12px 12px 0; }
+.compare td svg { width: 22px; height: 22px; vertical-align: -5px; margin-right: .6rem; }
+.reasons { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.reasons li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 1.3rem; display: grid; gap: .55rem; align-content: start; }
+.reasons .n { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #C8202B; color: #FFF8EC; display: grid; place-items: center; font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 1.2rem; }
+.reasons h3 { font-size: 1.15rem; }
+.reasons p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 1000px) { .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .reasons { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="ribbon" role="note">
+  <div class="wrap">
+    <span>Promociones de fin de año: ahorra hasta <b>$3.000.000</b> en tu lote · Válido del 1 nov al 31 dic</span>
+    <a href="#promo">Ver promoción</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="La Victoria, inicio"><b>LA VICTORIA</b><span>PROYECTO CAMPESTRE</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#promo">Promoción</a>
+      <a href="#proyecto">El proyecto</a>
+      <a href="#testimonio">Testimonio</a>
+      <a href="#zonas">Zonas comunes</a>
+      <a href="#pagos">Formas de pago</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-wa js-wa" href="#contacto" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <h1>Tierra propia frente a <em class="serif">las montañas.</em></h1>
+        <div class="hero-side">
+          <p class="lead">Lotes campestres de 8 × 20 m con escritura individual, zonas comunes listas para disfrutar y un plan de pagos que se ajusta a ti. En Coello, Tolima, a 5 minutos de Espinal.</p>
+          <div class="hero-cta">
+            <a class="btn btn-wa js-wa" href="#contacto" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+              Separa tu lote
+            </a>
+            <a class="btn btn-ghost" href="tel:+573104203682">Llamar 310 420 3682</a>
+            <a class="btn btn-ghost" href="#zonas">Conoce el proyecto</a>
+          </div>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <span class="hero-bg" aria-hidden="true"></span>
+        <img src="img/portada-drone.jpg" alt="Vista con drone de la nueva portería y el parqueadero azul de La Victoria, con los lotes trazados y las montañas al fondo" width="1500" height="2000" fetchpriority="high">
+        <figcaption>Foto real con drone · Portería y lotes</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <dl>
+        <div><dt>Precio del lote</dt><dd>$24.000.000</dd></div>
+        <div><dt>Separa con</dt><dd>$500.000</dd></div>
+        <div><dt>Tamaño</dt><dd>8 × 20 m</dd></div>
+        <div><dt>Plazo</dt><dd>Hasta 18 meses</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="proyecto">
+    <div class="wrap split">
+      <div class="media">
+        <video src="media/vista-drone.mp4" poster="img/vista-poster.jpg" autoplay muted loop playsinline aria-label="Vista con drone de la portería, el parqueadero y los lotes de La Victoria"></video>
+        <span class="badge-live"><i></i>Vista real con drone</span>
+      </div>
+      <div>
+        <p class="eyebrow">El proyecto</p>
+        <h2 style="margin-top:.8rem">Un proyecto que <em class="serif">ya es realidad.</em></h2>
+        <p class="lead" style="margin-top:1rem">Las vías están trazadas, los lotes delimitados y la zona social funcionando. Aquí no compras un plano: caminas tu lote antes de decidir.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Escritura individual</b> para cada lote.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Portería y entrada</b> con parqueadero en concreto.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Zona social</b> con piscina, jacuzzi, kiosko, parque infantil, canchas e iglesia.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Luz y agua</b> para construir tu casa o finca.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>A 5 minutos de Espinal</b>, con vías de acceso rápido.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Visitas de lunes a domingo</b> para que conozcas tu lote.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="recorrido" style="padding-top:0">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Recorrido completo</p>
+        <h2 style="margin-top:.8rem">Vuela sobre <em class="serif">La Victoria.</em></h2>
+        <p class="lead" style="margin-top:1rem">Desde la portería, por el sendero de árboles, sobre los lotes trazados hasta la zona social, con las montañas de fondo. Video real con drone, grabado en noviembre de 2026.</p>
+        <div class="hero-cta" style="margin-top:1.4rem">
+          <a class="btn btn-wa js-wa" data-plan="visita" href="#contacto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+            Agenda tu visita
+          </a>
+        </div>
+      </div>
+      <div class="media">
+        <video src="media/recorrido-hd.mp4" poster="img/recorrido-drone-poster.jpg" autoplay muted loop playsinline controls preload="auto" aria-label="Recorrido completo con drone desde la portería hasta la zona social de La Victoria"></video>
+        <span class="badge-live"><i></i>Recorrido en HD</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonio" class="testi">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Testimonio</p>
+        <h2>Lo que dicen <em class="serif">nuestros clientes.</em></h2>
+        <p class="lead">Escúchalo directamente desde el proyecto, con los lotes de fondo. Activa el sonido.</p>
+      </div>
+      <div class="testi-grid">
+        <video src="media/testimonio.mp4" poster="img/testimonio-poster.jpg" controls playsinline preload="metadata" aria-label="Testimonio de clientes grabado en La Victoria"></video>
+        <div class="side">
+          <figure><img src="img/obra-porteria.jpg" alt="Portería terminando de pintarse, con parqueadero azul y jardines" loading="lazy"><figcaption>Avance de obra · Portería y parqueadero</figcaption></figure>
+          <figure><img src="img/plano-oficina.jpg" alt="Clientes revisando el plano de lotes en la oficina" loading="lazy"><figcaption>Escoge tu lote en el plano</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zonas" class="zonas">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Zonas comunes</p>
+        <h2>Lo que vas a disfrutar <em class="serif">desde el primer día.</em></h2>
+      </div>
+      <div class="gallery">
+        <figure class="tile t1"><img src="img/piscina.jpg" alt="Piscina con jacuzzi y palmas bajo cielo azul" loading="lazy"><figcaption>Piscina y jacuzzi<small>Para toda la familia</small></figcaption></figure>
+        <figure class="tile t2"><img src="img/atardecer.jpg" alt="Piscina al atardecer con el kiosko de palma al fondo" loading="lazy"><figcaption>Atardeceres<small>Junto al kiosko</small></figcaption></figure>
+        <figure class="tile t3"><img src="img/sendero.jpg" alt="Sendero de ladrillo bajo árboles con troncos pintados de blanco" loading="lazy"><figcaption>Senderos arbolados</figcaption></figure>
+        <figure class="tile t4"><img src="img/kiosko.jpg" alt="Kiosko con techo de palma junto a la casa principal" loading="lazy"><figcaption>Kiosko de palma</figcaption></figure>
+        <figure class="tile t5"><img src="img/portada.jpg" alt="Portada de entrada con techo de teja y avenida de palmas" loading="lazy"><figcaption>Portada de entrada</figcaption></figure>
+        <figure class="tile t6"><img src="img/parque.jpg" alt="Parque infantil con resbaladeros de colores" loading="lazy"><figcaption>Parque infantil</figcaption></figure>
+        <figure class="tile t7"><img src="img/terraza.jpg" alt="Terraza con mesa frente a un árbol grande y la piscina" loading="lazy"><figcaption>Terraza y zonas verdes</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Por qué La Victoria</p>
+        <h2>¿Por qué <em class="serif">comprarnos a nosotros?</em></h2>
+      </div>
+      <div class="compare-box">
+        <table class="compare">
+          <thead><tr><th scope="col">La Victoria</th><th scope="col">Otros proyectos</th></tr></thead>
+          <tbody>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Escritura pública individual</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Muchas veces solo promesa de compraventa</td></tr>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Financiación hasta 18 meses</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Plazos cortos o pago de contado</td></tr>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Luz y agua</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Servicios que llegan “pronto”</td></tr>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Piscina, kiosko, parque, canchas e iglesia</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Solo el lote</td></tr>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>A 5 minutos de Espinal, con vías de acceso rápido</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Lejos y con vías destapadas</td></tr>
+            <tr><td><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1E7A4C"/><path d="M9.5 16.5l4.2 4.2 8.8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Visitas de lunes a domingo</td><td><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#B9AC97"/><path d="M9 9l8 8M17 9l-8 8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>Visitas solo con cita entre semana</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Plan maestro</p>
+        <h2 style="margin-top:.8rem">Así se proyecta <em class="serif">La Victoria.</em></h2>
+        <p class="lead" style="margin-top:1rem">Lotes organizados alrededor de la zona social, con vías internas, cancha y área de parqueo.</p>
+      </div>
+      <figure>
+        <img src="img/plan.jpg" alt="Render aéreo del plan maestro con lotes, vías, piscina, casa, cancha y bodega" loading="lazy">
+        <figcaption>Render ilustrativo. Puede variar en la ejecución final.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Tu lote, tu futuro</p>
+        <h2>¿Por qué comprar <em class="serif">tu lote?</em></h2>
+      </div>
+      <ol class="reasons">
+        <li><span class="n">1</span><h3>Dejas de pagar arriendo</h3><p>Lo que hoy pagas cada mes se vuelve algo tuyo.</p></li>
+        <li><span class="n">2</span><h3>Es patrimonio para tu familia</h3><p>Con escritura pública a tu nombre.</p></li>
+        <li><span class="n">3</span><h3>Construyes a tu ritmo</h3><p>Tu casa, tu finca o tu casa de descanso.</p></li>
+        <li><span class="n">4</span><h3>Lo pagas sin afanes</h3><p>Financiación hasta 12 meses, o hasta 18 según los lotes que compres.</p></li>
+        <li><span class="n">5</span><h3>Disfrutas desde el primer día</h3><p>Piscina, kiosko, parque infantil y canchas.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="pagos" class="pagos">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Formas de pago</p>
+        <h2>Elige cómo <em class="serif">pagar tu lote.</em></h2>
+        <p class="lead">Todos los planes empiezan igual: separas con $500.000 y aseguras tu lote.</p>
+      </div>
+      <div class="options">
+        <article class="opt">
+          <span class="tag plain">Más flexible</span>
+          <p class="big">Hasta 18 meses<small>financia tu lote en cuotas</small></p>
+          <ul><li>Separas con $500.000</li><li>Hasta 12 meses, o hasta 18 según los lotes que compres</li><li>Ideal si no tienes el total hoy</li></ul>
+          <a class="btn btn-ghost js-wa" data-plan="cuotas" href="#contacto" target="_blank" rel="noopener">Quiero este plan</a>
+        </article>
+        <article class="opt feature">
+          <span class="tag">Ahorras $2.000.000</span>
+          <p class="big">30% inicial<small>pago inmediato del 30% del lote ($7.200.000)</small></p>
+          <ul><li>Descuento de $2.000.000</li><li>El saldo lo acuerdas con un asesor</li><li>Promoción de fin de año</li></ul>
+          <a class="btn btn-wa js-wa" data-plan="30%" href="#contacto" target="_blank" rel="noopener">Quiero este plan</a>
+        </article>
+        <article class="opt">
+          <span class="tag">Ahorras $3.000.000</span>
+          <p class="big">De contado<small>pago total del lote</small></p>
+          <ul><li>El mayor descuento</li><li>Tu lote queda pago de una vez</li><li>Promoción de fin de año</li></ul>
+          <a class="btn btn-ghost js-wa" data-plan="contado" href="#contacto" target="_blank" rel="noopener">Quiero este plan</a>
+        </article>
+      </div>
+      <p class="note">Precios en pesos colombianos. El valor final depende del lote elegido; un asesor te confirma el plan exacto.</p>
+    </div>
+  </section>
+
+  <section id="promo">
+    <div class="wrap">
+      <div class="xmas">
+        <div class="txt">
+          <p class="kicker">Promociones de fin de año · Para nuestros clientes</p>
+          <h2>Tu regalo de Navidad: <em>hasta $3 millones de descuento.</em></h2>
+          <div class="coupons">
+            <div class="coupon">
+              <div class="amt"><small>AHORRA</small><b>$2</b><i>millones</i></div>
+              <div class="info"><small>Pago inmediato</small><b>Paga el 30% de tu lote</b><span>$7.200.000 sobre un lote de $24.000.000</span></div>
+            </div>
+            <div class="coupon gold">
+              <div class="amt"><small>AHORRA</small><b>$3</b><i>millones</i></div>
+              <div class="info"><small>Pago de contado</small><b>Paga tu lote completo</b><span>El mayor ahorro de la temporada</span></div>
+            </div>
+          </div>
+          <div>
+            <p class="kicker" style="margin-bottom:.8rem">¡Corre! La promo termina en</p>
+            <div class="flip" aria-live="off" id="countdown">
+              <div><b id="cd-d">--</b><span>DÍAS</span></div><em aria-hidden="true">:</em>
+              <div><b id="cd-h">--</b><span>HORAS</span></div><em aria-hidden="true">:</em>
+              <div><b id="cd-m">--</b><span>MIN</span></div><em aria-hidden="true">:</em>
+              <div><b id="cd-s">--</b><span>SEG</span></div>
+            </div>
+          </div>
+          <p class="valid">Válido del <span>1 nov al 31 dic 2026</span> · Cupos limitados</p>
+          <a class="btn btn-gold js-wa" style="justify-self:start" href="#contacto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+            ¡Separa tu lote ya!
+          </a>
+        </div>
+        <div class="img"><img src="img/atardecer.jpg" alt="Piscina y kiosko de La Victoria al atardecer" loading="lazy"><span>Quedan pocos lotes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Cómo comprar</p>
+        <h2>Tu lote en <em class="serif">tres pasos.</em></h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Visita y elige</h3><p>Agenda una visita, recorre el proyecto y escoge el lote que más te guste.</p></li>
+        <li><h3>Separa con $500.000</h3><p>Aseguras tu lote y el descuento vigente mientras defines tu plan de pago.</p></li>
+        <li><h3>Paga y escritura</h3><p>Completas el pago en cuotas o de contado y recibes la escritura individual de tu lote.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="preguntas" style="padding-top:0">
+    <div class="wrap faq">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Lo que más <em class="serif">nos preguntan.</em></h2>
+      </div>
+      <div>
+        <details open><summary>¿Cuánto cuesta un lote?</summary><p>El lote de 8 × 20 m cuesta $24.000.000. Lo apartas con $500.000.</p></details>
+        <details><summary>No tengo los $24 millones, ¿puedo comprar?</summary><p>Sí. Separas con $500.000 y pagas el resto en cuotas hasta por 12 meses, o hasta 18 según los lotes que compres.</p></details>
+        <details><summary>¿Los lotes tienen escritura?</summary><p>Sí, cada lote tiene escritura individual a nombre del comprador.</p></details>
+        <details><summary>¿Hasta cuándo va la promoción?</summary><p>Hasta el 31 de diciembre de 2026: $2.000.000 de descuento pagando el 30% y $3.000.000 pagando de contado.</p></details>
+        <details><summary>¿Puedo visitar el proyecto antes de comprar?</summary><p>Claro, recibimos visitas de lunes a domingo. Escríbenos por WhatsApp y agendamos tu visita para que recorras los lotes y las zonas comunes.</p></details>
+        <details><summary>¿Dónde queda el proyecto?</summary><p>En Coello, Tolima, a 5 minutos de Espinal, con vías de acceso rápido.</p></details>
+        <details><summary>¿El proyecto tiene luz y agua?</summary><p>Sí, el proyecto cuenta con luz y agua.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2 style="margin-top:.8rem">Hablemos de <em class="serif">tu lote.</em></h2>
+        <p class="lead" style="margin-top:1rem">Déjanos tus datos y te abrimos WhatsApp con el mensaje listo. Te responde Yurani García, asesora del proyecto.</p>
+        <div class="contact-data">
+          <p><small>WhatsApp y llamadas</small><b id="wa-display">+57 310 420 3682</b></p>
+          <p><a class="btn btn-ghost" href="tel:+573104203682" style="justify-self:start">Llamar al 310 420 3682</a></p>
+          <p><small>Ubicación</small><b>Coello, Tolima · a 5 minutos de Espinal</b></p>
+        </div>
+      </div>
+      <form class="lead-form" id="lead-form" novalidate>
+        <div class="field"><label for="f-name">Nombre</label><input id="f-name" name="name" autocomplete="name" required placeholder="Tu nombre"></div>
+        <div class="field"><label for="f-city">Ciudad</label><input id="f-city" name="city" autocomplete="address-level2" placeholder="Desde dónde nos escribes"></div>
+        <div class="field">
+          <label for="f-plan">Me interesa</label>
+          <select id="f-plan" name="plan">
+            <option value="cuotas">Pagar en cuotas</option>
+            <option value="30%">Pagar el 30% (−$2.000.000)</option>
+            <option value="contado">Pagar de contado (−$3.000.000)</option>
+            <option value="visita">Agendar una visita</option>
+          </select>
+        </div>
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+          Escribir por WhatsApp
+        </button>
+        <p class="form-note">Se abre WhatsApp con tu mensaje. No guardamos tus datos en esta página.</p>
+        <p class="form-msg" id="form-msg" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Novaterra</b> · La Victoria Proyecto Campestre</span>
+    <span>Fotos y video reales del proyecto. El plan maestro es un render ilustrativo.</span>
+  </div>
+</footer>
+
+<a class="btn btn-wa fab js-wa" href="#contacto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/></svg>
+  <span>Escríbenos</span>
+</a>
+
+<script>
+const WHATSAPP = "573104203682";
+const PLAN_TXT = {
+  cuotas: "pagar en cuotas",
+  "30%": "pagar el 30% con el descuento de $2.000.000",
+  contado: "pagar de contado con el descuento de $3.000.000",
+  visita: "agendar una visita"
+};
+function waLink(text) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text); }
+function defaultMsg(plan) { return "Hola, vi la página de La Victoria y quiero información" + (plan ? " para " + PLAN_TXT[plan] : "") + "."; }
+document.querySelectorAll(".js-wa").forEach(a => { a.href = waLink(defaultMsg(a.dataset.plan)); });
+
+document.getElementById("lead-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("f-name");
+  const city = document.getElementById("f-city").value.trim();
+  const plan = document.getElementById("f-plan").value;
+  const msg = document.getElementById("form-msg");
+  if (!name.value.trim()) { msg.hidden = false; msg.textContent = "Escribe tu nombre para continuar."; name.focus(); return; }
+  const text = "Hola, soy " + name.value.trim() + (city ? ", de " + city : "") + ". Vi la página de La Victoria y quiero " + PLAN_TXT[plan] + ".";
+  const url = waLink(text);
+  msg.hidden = false;
+  msg.innerHTML = 'Si WhatsApp no se abrió, <a href="' + url + '" target="_blank" rel="noopener">toca aquí</a>.';
+  window.open(url, "_blank", "noopener");
+});
+
+// Cuenta regresiva al 31-12-2026 23:59:59 hora de Colombia
+const END = Date.UTC(2027, 0, 1, 4, 59, 59);
+const pad = n => String(n).padStart(2, "0");
+function tick() {
+  let s = Math.max(0, Math.floor((END - Date.now()) / 1000));
+  const d = Math.floor(s / 86400); s -= d * 86400;
+  const h = Math.floor(s / 3600); s -= h * 3600;
+  const m = Math.floor(s / 60); s -= m * 60;
+  document.getElementById("cd-d").textContent = pad(d);
+  document.getElementById("cd-h").textContent = pad(h);
+  document.getElementById("cd-m").textContent = pad(m);
+  document.getElementById("cd-s").textContent = pad(s);
+}
+tick(); setInterval(tick, 1000);
+</script>
+</body>
+</html>
