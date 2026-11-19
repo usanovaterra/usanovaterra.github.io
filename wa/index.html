@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto Campestre La Victoria — WhatsApp</title>
+<meta name="robots" content="noindex">
+<script>
+  var WA = "https://wa.me/573143935949?text=" + encodeURIComponent("Hola, vengo de Facebook y quiero información del Proyecto Campestre La Victoria 🏡");
+  // Redirige apenas carga
+  try { window.location.replace(WA); } catch (e) { window.location.href = WA; }
+</script>
+<style>
+  :root{ --verde:#0B2E20; --dorado:#F2C14E; --wa:#1FA855; --crema:#FFF8EC; }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:var(--verde);color:var(--crema);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;text-align:center;padding:24px}
+  .card{max-width:420px}
+  h1{color:var(--dorado);font-size:1.5rem;margin:0 0 8px;font-weight:800}
+  p{font-size:1.05rem;line-height:1.5;margin:0 0 24px;opacity:.92}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;
+       font-weight:700;font-size:1.1rem;padding:16px 28px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  .spin{width:34px;height:34px;border:4px solid rgba(255,255,255,.25);border-top-color:var(--dorado);
+        border-radius:50%;animation:s 1s linear infinite;margin:0 auto 20px}
+  @keyframes s{to{transform:rotate(360deg)}}
+  small{display:block;margin-top:18px;opacity:.6}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="spin"></div>
+    <h1>Abriendo WhatsApp…</h1>
+    <p>Te estamos conectando con un asesor de <b>Proyecto Campestre La Victoria</b>. Si no abre solo, toca el botón:</p>
+    <a class="btn" id="go" href="#">💬 Chatear por WhatsApp</a>
+    <small>Lotes campestres a 5 min de Espinal, Tolima</small>
+  </div>
+  <script>document.getElementById('go').setAttribute('href', WA);</script>
+</body>
+</html>
